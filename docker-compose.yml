@@ -1,0 +1,25 @@
+data:
+  image: hervenicol/leed
+  volumes:
+    - "/var/www/html"
+httpd:
+  image: hervenicol/apache:2.4
+  ports:
+    - "8006:80"
+  volumes_from:
+    - "data"
+  environment:
+    - "PHP_SERVER=php-fpm:9000"
+  links:
+    - "php-fpm"
+php-fpm:
+  image: hervenicol/php5-fpm
+  environment:
+    - "LEED_MYSQL_HOST=$LEED_MYSQL_HOST"
+    - "LEED_MYSQL_LOGIN=$LEED_MYSQL_LOGIN"
+    - "LEED_MYSQL_MDP=$LEED_MYSQL_MDP"
+    - "LEED_MYSQL_BDD=$LEED_MYSQL_BDD"
+    - "LEED_MYSQL_PREFIX=$LEED_MYSQL_PREFIX"
+  volumes_from:
+    - "data"
+

@@ -11,8 +11,7 @@ ADD https://github.com/ldleman/Leed/archive/master.zip /tmp/leed.zip
 RUN mkdir -p /var/www \
   && cd /tmp \
   && unzip leed.zip \
-  && mv Leed-master /var/www/html \
-  && mkdir -p /var/www/html/var/lib/php5/sessions/
+  && mv Leed-master /var/www/html
 
 #ADD conf/constant.php /var/www/html/
 

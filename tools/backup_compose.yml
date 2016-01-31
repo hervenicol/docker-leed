@@ -1,5 +1,5 @@
 # Docker-compose.yml for leed backups
-# Must be run by backup-leeds.sh
+# Must be run by leed-backup.sh
 #
 backup:
   image: debian:jessie

@@ -1,4 +1,5 @@
-# Must be ran as:
+# Docker-compose.yml for leed backups
+# Must be run by backup-leeds.sh
 #
 backup:
   image: debian:jessie
@@ -7,4 +8,3 @@ backup:
   volumes_from:
     - "$leed_container"
   command: cp -frpv /var/www/html/ /backup/
-#  command: ls -l /var/www/html

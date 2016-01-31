@@ -1,0 +1,10 @@
+# Must be ran as:
+#
+backup:
+  image: debian:jessie
+  volumes:
+    - "$leed_backupdir:/backup"
+  volumes_from:
+    - "$leed_container"
+  command: cp -frpv /var/www/html/ /backup/
+#  command: ls -l /var/www/html

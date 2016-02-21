@@ -8,6 +8,8 @@ Leed container
 	git clone git@github.com:hervenicol/docker-leed.git .
 	docker-compose up -d
 
+*Note: you actually only need docker-compose.yml file to start Leed*
+
 It exposes port **8006** on your server. You can change this by editing **docker-compose.yml**.
 
 You should then give access to this container through your web server.

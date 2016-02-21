@@ -12,7 +12,12 @@ RUN mkdir -p /var/www \
   && cd /tmp \
   && unzip leed.zip \
   && mv Leed-master /var/www/html
+ADD https://github.com/ldleman/Leed-market/archive/master.zip /tmp/leed-market.zip
+RUN cd /tmp \
+  && unzip leed-market.zip \
+  && mv Leed-market-master/* /var/www/html/plugins/
 
+#Config file
 #ADD conf/constant.php /var/www/html/
 
 EXPOSE 80

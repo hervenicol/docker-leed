@@ -4,7 +4,7 @@ data:
   volumes:
     - "/var/www/html"
 httpd:
-  restart: "on-failure:10"
+  restart: "always"
   image: "hervenicol/apache:2.4"
   ports:
     - "8006:80"
@@ -15,7 +15,7 @@ httpd:
   links:
     - "php-fpm"
 php-fpm:
-  restart: "on-failure:10"
+  restart: "always"
   image: "hervenicol/php5-fpm"
 ## Unsuccessfull attempt at Leed auto-config
 #  environment:

@@ -20,8 +20,6 @@ RUN cd /tmp \
 #Config file
 #ADD conf/constant.php /var/www/html/
 
-EXPOSE 80
-
 LABEL description="Jessie / Apache 2.4 / Leed"
 
 VOLUME /var/www/html

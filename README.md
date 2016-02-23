@@ -3,6 +3,14 @@ Leed container
 
 ### Homepage: http://leed.idleman.fr/
 
+
+### Prerequisites
+
+- docker
+- docker-compose
+- a MySQL server
+
+
 ### How to start:
 	mkdir leed && cd leed
 	git clone git@github.com:hervenicol/docker-leed.git .

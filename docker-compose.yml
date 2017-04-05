@@ -5,7 +5,7 @@ data:
     - "/var/www/html"
 httpd:
   restart: "always"
-  image: "hervenicol/apache:2.4"
+  image: "hervenicol/apache2.4"
   ports:
     - "8006:80"
   volumes_from:
